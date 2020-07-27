@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Command Line Parameters in C++</title>
+</head>
+<body style="color: rgb(0, 0, 0); background-color: rgb(204, 255, 255);" alink="#000099" link="#000099" vlink="#990099">
+<h1>
+Command Line Parameters in C++</h1>
+Here is a brief tutorial on how to add command-line parameters in C++:<br>
+<br>
+The function <span style="font-family: monospace;">main</span>
+can be used with two parameters <span style="font-family: monospace;">argc</span> and <span style="font-family: monospace;">argv</span> as follows:<br>
+<br>
+<span style="font-family: monospace;">int main(int argc,
+char *argv[])</span><br>
+<br>
+The value of <span style="font-family: monospace;">argc</span>
+is the number of arguments on the command line including the name of
+the program itself.&nbsp; For example, the command line "<span style="font-family: monospace;">a.out file1.txt file2.txt</span>"
+would set <span style="font-family: monospace;">argc</span>
+to 3.&nbsp; If your program requires three command line arguments,
+then <span style="font-family: monospace;">argc</span>
+must be 4.&nbsp; For usability purposes, your program should detect
+invalid command lines and exit with an appropriate error message that
+indicates how to specify the command line parameters.<br>
+<br>
+The variable <span style="font-family: monospace;">argv</span>
+is an array of C-style strings (an array of characters).&nbsp; Each
+element of the array is holding one command line argument.&nbsp; <span style="font-family: monospace;">argv[0]</span> always
+contains the name of the program, <span style="font-family: monospace;">argv[1]</span> holds
+the first command line argument, and so forth.&nbsp; The size of
+the <span style="font-family: monospace;">argv</span>
+array is always equal to <span style="font-family: monospace;">argc</span>.
+For example, in the command line "<span style="font-family: monospace;">a.out file1.txt file2.txt</span>",
+<span style="font-family: monospace;">argv[0]</span>
+is "<span style="font-family: monospace;">a.out</span>",
+<span style="font-family: monospace;">argv[1]</span>
+is "<span style="font-family: monospace;">file1.txt</span>",
+and <span style="font-family: monospace;">argv[2]</span>
+is "<span style="font-family: monospace;">file2.txt</span>".<br>
+<hr style="width: 100%; height: 2px;"><br>
+</body></html><!--============== FOOTER START ===========================-->
+
+<TABLE cellSpacing=0 cellPadding=0 width=400 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle><FONT class=text>This is a personal WEB site developed and maintained by an individual and not by Seattle University. The content and link(s) provided on this site do not represent or reflect the view(s) of Seattle University. The individual who authored this site is solely responsible for the site's content. This site and its author are subject to applicable University policies including the Computer Acceptable Use Policy <a href=http://www.seattleu.edu/policies>(www.seattleu.edu/policies)</a>.</FONT>&nbsp;</TD></TR>
+  <TR>
+    <TD height=20></TD>
+  </TR>
+  </TBODY>
+</TABLE>
+<!--============== FOOTER END =============================-->
